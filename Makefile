@@ -32,4 +32,14 @@ bin/testCircle: testCircle.cpp Circle.o Shape.o Point2D.o
 	mkdir -p bin
 	g++ -o bin/testCircle testCircle.o Circle.o Shape.o Point2D.o
 
+Rectangle.o: Rectangle.cpp Rectangle.h Shape.h Point2D.h
+	g++ -c Rectangle.cpp
+
+bin/testRectangle: testRectangle.cpp Rectangle.o Shape.o Point2D.o
+	g++ -c testRectangle.cpp
+	mkdir -p bin
+	g++ -o bin/testRectangle testRectangle.o Rectangle.o Shape.o Point2D.o
+
+
+
 
